@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body style="align-content: center; display: flex; justify-content: center; width: 100%; ">
+    <form action="index.html">
+        <div>
+            <label>First Name</label>
+            <input name="firstName" type="text" />
+        </div>
+        <br/>
+        <div>
+            <label>Last Name</label>
+            <input name="lastName" type="text" />
+        </div>
+        <br>
+        <div>
+            <label>Email</label>
+            <input name="email" pattern="[a-zA-Z0-9_.%]+@+[a-zA-Z0-9_.%]+.+[a-zA-Z0-9_.%]" type="email" required />
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
