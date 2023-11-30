@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Wendy+One&display=swap');
+
+body {
+  background: url("../images/bg.png"), lightgray 50% / cover no-repeat;
+  width: 100%;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navigation {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 21px;
+}
+
+.icons {
+  width: 38px;
+  height: 39.5px;
+  flex-shrink: 0;
+}
+.menu {
+  display: inline-flex;
+  gap: 9px;
+  flex-direction: row;
+
+  color: #642c99;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.top-section {
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.top-section-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+.top-section-image {
+  width: 457px;
+  height: 630px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0%;
+  left: 60%;
+  background: url('../images/donuts1.png'),  100% / cover no-repeat;
+}
+.top-section-title{
+    color: #642C99;
+    font-family: "Wendy One";
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
