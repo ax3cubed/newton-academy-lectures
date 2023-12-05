@@ -4,11 +4,13 @@ body {
   background: url("../images/bg.png"), lightgray 50% / cover no-repeat;
   width: 100%;
 }
+
 nav {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .navigation {
   display: inline-flex;
   justify-content: space-between;
@@ -21,6 +23,7 @@ nav {
   height: 39.5px;
   flex-shrink: 0;
 }
+
 .menu {
   display: inline-flex;
   gap: 9px;
@@ -33,19 +36,21 @@ nav {
   font-weight: 400;
   line-height: normal;
 }
+
 .top-section {
-   
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
 }
-.top-section-container{
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 100px;
+
+.top-section-container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 100px;
 }
 
 .top-section-image {
@@ -55,13 +60,96 @@ nav {
   position: absolute;
   top: 0%;
   left: 60%;
-  background: url('../images/donuts1.png'),  100% / cover no-repeat;
+  background: url('../images/donuts1.png'), 100% / cover no-repeat;
 }
-.top-section-title{
-    color: #642C99;
-    font-family: "Wendy One";
-    font-size: 120px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+
+.top-section-title {
+  color: #642C99;
+  font-family: Wendy One;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 23px;
+}
+
+.top-section-subtitle {
+  color: #642C99;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  /* 144.444% */
+}
+
+.list-section {
+
+  margin-top: 180px;
+  display: flex;
+  width: 100%;
+
+}
+
+.list-section-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+table {
+  display: flex;
+  width: 100%;
+  border-collapse: collapse;
+  justify-content: center;
+  color: #642C99;
+
+  font-family: Wendy One;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+td,
+th {
+
+  padding-top: 10px;
+  text-align: left;
+}
+
+tr {
+  gap: 61px;
+}
+.total-container{
+  display: flex;
+  width: 80%;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
+  gap: 80px;
+  
+  
+}
+
+.total-label{
+color: #642C99;
+font-family: Lato;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: lowercase;
+}
+.total{
+  color: #642C99;
+text-align: center;
+font-family: Wendy One;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+
 }

@@ -1,42 +1,84 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/checkout.css" />
     <title>Checkout</title>
 </head>
+
 <body>
     <nav>
         <div class="navigation">
-        <div class="menu">
-            <div>Shop</div>
-            <div>Our Story</div>
-            <div>Why Miss Cupcake</div>
-            <!-- Menu -->
+            <div class="menu">
+                <div>Shop</div>
+                <div>Our Story</div>
+                <div>Why Miss Cupcake</div>
+                <!-- Menu -->
+            </div>
+            <div>
+                <img class="icons" src="./assets/icons/trolley.svg" />
+            </div>
         </div>
-        <div>
-           <img class="icons" src="./assets/icons/trolley.svg" />
-        </div>
-    </div>
     </nav>
     <section class="top-section">
         <div class="top-section-container">
-        <div>
-            <h1>Check out</h1>
-            <h5>Complete your order and we'll bring it to your door. </h5>
-            <!-- Title and sub title -->
+            <div class="text-wrapper">
+                <h1 class="top-section-title">Check out</h1>
+                <h5 class="top-section-subtitle">Complete your order and we'll bring it to your door. </h5>
+                <!-- Title and sub title -->
+            </div>
+            <div class="top-section-image">
+                <!-- Right Image -->
+            </div>
         </div>
-        <div class="top-section-image">
-             <!-- Right Image -->
-
-        </div>
-    </div>
     </section>
-    <section>
-    <!-- Body -->
+    <section class="list-section">
+        <div class="list-section-container">
+            <table>
+
+
+                <tr>
+                    <th style="width: 152px;"><img src="./assets/images/image 43.svg" /></th>
+                    <th style="width: 500px;">Carrot</th>
+                    <th style="width:80px;">1</th>
+                    <th>$3.49</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="./assets/images/cupcake 4.svg" />
+                    </td>
+                    <td> Red Velvet</td>
+                    <td>3</td>
+                    <td>$10.47</td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/images/cupcake 5.svg"/></td>
+                    <td>Mint Chip</td>
+                    <td>2</td>
+                    <td>$6.98</td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/images/cupcake 6.svg"/></td>
+                    <td>Pink Strawbeerry</td>
+                    <td>2</td>
+                    <td>$6.98</td>
+                </tr>
+            </table>
+            <svg style="stroke-width: 2px;
+            stroke: #642C99; width: 90%;  align-self: center; margin-top: 80px; display: flex;" xmlns="http://www.w3.org/2000/svg" width="1036" height="2" viewBox="0 0 1036 2" fill="none">
+                <path d="M1036 1H0" stroke="#642C99" stroke-width="2"/>
+              </svg>
+
+            <div class="total-container">
+                <p class="total-label">Total to pay</p>
+                <p class="total">$27.92</p>
+            </div>
+        </div>
     </section>
     <footer>
-    <!-- Footer for the pagee -->
+        <!-- Footer for the pagee -->
     </footer>
 </body>
+
 </html>
