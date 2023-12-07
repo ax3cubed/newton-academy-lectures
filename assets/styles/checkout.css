@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Wendy+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Wendy+One&display=swap");
 
 body {
   background: url("../images/bg.png"), lightgray 50% / cover no-repeat;
   width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 nav {
@@ -38,11 +41,10 @@ nav {
 }
 
 .top-section {
-
   width: 100%;
   display: flex;
   justify-content: center;
-
+  justify-items: center;
 }
 
 .top-section-container {
@@ -60,11 +62,11 @@ nav {
   position: absolute;
   top: 0%;
   left: 60%;
-  background: url('../images/donuts1.png'), 100% / cover no-repeat;
+  background: url("../images/donuts1.png"), 100% / cover no-repeat;
 }
 
 .top-section-title {
-  color: #642C99;
+  color: #642c99;
   font-family: Wendy One;
   font-size: 120px;
   font-style: normal;
@@ -74,7 +76,7 @@ nav {
 }
 
 .top-section-subtitle {
-  color: #642C99;
+  color: #642c99;
   font-family: Lato;
   font-size: 18px;
   font-style: normal;
@@ -84,11 +86,10 @@ nav {
 }
 
 .list-section {
-
-  margin-top: 180px;
+  margin-top: 290px;
   display: flex;
   width: 100%;
-
+  margin-bottom: 50%;
 }
 
 .list-section-container {
@@ -98,25 +99,22 @@ nav {
   justify-content: center;
 }
 
-
 table {
   display: flex;
   width: 100%;
   border-collapse: collapse;
   justify-content: center;
-  color: #642C99;
+  color: #642c99;
 
   font-family: Wendy One;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-
 }
 
 td,
 th {
-
   padding-top: 10px;
   text-align: left;
 }
@@ -124,32 +122,143 @@ th {
 tr {
   gap: 61px;
 }
-.total-container{
+.total-container {
   display: flex;
   width: 80%;
   justify-content: end;
   text-align: center;
   align-items: center;
   gap: 80px;
-  
-  
 }
 
-.total-label{
-color: #642C99;
+.total-label {
+  color: #642c99;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: lowercase;
+}
+.total {
+  color: #642c99;
+  text-align: center;
+  font-family: Wendy One;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.checkout-button {
+  width: 322px;
+  height: 59px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #642c99;
+  color: #fbfac9;
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.checkout-button:hover {
+  background: #6b18b8;
+}
+
+footer {
+  margin-top: 10%;
+  height: 200px;
+  position: absolute;
+  top: 250vh;
+  width: 100%;
+}
+.footer-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.footer-container {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  margin: auto;
+}
+.footer-contact {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 100px;
+}
+.logo-title {
+  color: #fdefd1;
+  font-family: Wendy One;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.links {
+  color: #fdefd1;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 166.667% */
+}
+
+.contact-input {
+  border-radius: 8px;
+  color: #fdefd1;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 187.5% */
+  background-color: transparent;
+
+  border: 2px solid #fdefd1;
+}
+
+.contact-input::placeholder {
+  color: #fdefd1;
+}
+.sugar-box {
+  color: #fdefd1;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 166.667% */
+}
+
+.footer-button {
+  border-radius: 8px;
+  background: #fdefd1;
+  color: #642c99;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 27px;
+  width: 106px;
+  height: 43px;
+  flex-shrink: 0;
+}
+.footer-quicklinks{
+  color: #FDEFD1;
 font-family: Lato;
-font-size: 20px;
+font-size: 18px;
+width: 100%;
 font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-transform: lowercase;
-}
-.total{
-  color: #642C99;
-text-align: center;
-font-family: Wendy One;
-font-size: 36px;
-font-style: normal;
-font-weight: 400;
-
+font-weight: 500;
+line-height: 48px; /* 266.667% */
+display: flex;
+gap: 5%;
+margin-top: 5%;
 }

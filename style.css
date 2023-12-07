@@ -67,7 +67,5 @@ button{
 @media screen and (max-width:371px) {
     button {
         width: 200px;  
-    } 
-   
-  
+    }  
 }
