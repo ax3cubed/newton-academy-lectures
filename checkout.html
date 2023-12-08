@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/checkout.css" />
+    <script src="./assets/script/checkout.js"></script>
     <title>Checkout</title>
 </head>
 
@@ -35,14 +36,14 @@
     </section>
     <section class="list-section">
         <div class="list-section-container">
-            <table>
+            <table id="checkoutTable">
 
 
                 <tr>
                     <th style="width: 152px;"><img src="./assets/images/image 43.svg" /></th>
                     <th style="width: 500px;">Carrot</th>
                     <th style="width:80px;">1</th>
-                    <th>$3.49</th>
+                    <th id="amount-1">$3.49</th>
                 </tr>
                 <tr>
                     <td>
@@ -72,7 +73,7 @@
 
             <div class="total-container">
                 <p class="total-label">Total to pay</p>
-                <p class="total">$27.92</p>
+                <p class="total" id="totalAmount"></p>
             </div>
 
             <div class="total-container">
