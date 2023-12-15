@@ -1,0 +1,26 @@
+[
+    {
+        "image_url": "assets/images/image 43.svg",
+        "name": "Carrot",
+        "quantity": 1,
+        "amount": 20.52
+    },
+    {
+        "image_url": "assets/images/cupcake 4.svg",
+        "name": "Red Velvet",
+        "quantity": 3,
+        "amount": 15.23
+    },
+    {
+        "image_url": "assets/images/cupcake 5.svg",
+        "name": "Mint Chip",
+        "quantity": 2,
+        "amount": 21.22
+    },
+    {
+        "image_url": "assets/images/cupcake 6.svg",
+        "name": "Pink Strawberry",
+        "quantity": 9,
+        "amount": 20.52
+    }
+]
