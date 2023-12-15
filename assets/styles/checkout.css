@@ -169,6 +169,22 @@ tr {
   background: #6b18b8;
 }
 
+.action-button {
+  width: 40.5px;
+  height: 30px;
+  margin-left: 2%;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #642c99;
+  color: #fbfac9;
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
 footer {
   margin-top: 10%;
   height: 200px;

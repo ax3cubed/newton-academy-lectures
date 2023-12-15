@@ -25,17 +25,16 @@ document.addEventListener("DOMContentLoaded", async function () {
       console.error("Error during fetch", error);
     }
   }
-  const data = await fetchCakes();
-  console.log(data);
-  let checkoutTable = document.getElementById("checkoutTable");
+  let data = await fetchCakes();
+  
+  function createTable(){
+    let checkoutTable = document.getElementById("checkoutTable");
 
+    checkoutTable.removeChild(checkoutTable.lastChild);
   // Create table body
   let tbody = document.createElement("tbody");
   data.forEach((item) => {
-
     let row = document.createElement("tr");
-
-    
     // let imgCell = document.createElement("td");
     // let img = document.createElement("img");
     // img.src = item.image_url;
@@ -59,22 +58,86 @@ document.addEventListener("DOMContentLoaded", async function () {
        let imgCell = document.createElement("td");
        let img = document.createElement("img");
        img.src = item.image_url;
+       img.style = 'width: 152px;';
        imgCell.appendChild(img);
        row.appendChild(imgCell);
       }
       else{
+       
        let cell = document.createElement("td");
        cell.appendChild(document.createTextNode(item[key]));
+       if (key == "name") {
+        cell.style = 'width: 500px;'
+       }
+       else{
+        cell.style = 'width:80px;'
+       }
+      //  switch (key) {
+      //   case "name":
+      //     cell.style = 'width: 500px;'
+      //     break;
+      // default:
+      //   cell.style = 'width:80px;'
+      //  }
        row.appendChild(cell);
       }
      })
+     let action = document.createElement("td");
+     let button = document.createElement("button");
+     button.className = 'action-button';
+     button.appendChild(document.createTextNode("#"));
+     button.id = `button${item.id}`
+     button.onclick = (ev) => {
+      deleteTableRow(item.id)
+     }
+     action.appendChild(button);
+     row.appendChild(action);
     tbody.appendChild(row);
   });
 
 
+  // File I/O
+  // Creating, Updating, deleting from JSON file
+  // use javascript to delete an object in the json file 
+
+  // Array Manipulation
+  
+
   
   checkoutTable.appendChild(tbody);
+  // document.addEventListener("mousemove", function name(evt) {
+  //   console.log(`x: ${evt.clientX}, y: ${evt.clientY}`);
+  // })
+
+  }
+  function deleteTableRow(rowId) {
+    var check = data.find(cake => cake.id === rowId);
+    if (check) {
+      var userResponse;
+      if (confirm("Do you really want to delete this item?") == true) {
+        let newArray = [];
+        data.forEach(item =>{
+          if (item.id != check.id) {
+            newArray.push(item);
+          }
+        })
+        data = newArray;
+        createTable();
+        console.log(check);  
+        userResponse = "Sucessfully Deleted";
+      }
+      else{
+        userResponse = "Delete Cancelled";
+      }
+    
+    }
+    else{
+      throw new Error(`row id ${rowId} not found`)
+    }
+  }
+  createTable();
 });
+
 
 
 
