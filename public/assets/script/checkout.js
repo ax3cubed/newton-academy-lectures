@@ -12,6 +12,7 @@
 //   console.error("Error during fetch", error);
 // })
 
+
 document.addEventListener("DOMContentLoaded", async function () {
   async function fetchCakes() {
     try {
@@ -88,7 +89,8 @@ document.addEventListener("DOMContentLoaded", async function () {
      button.appendChild(document.createTextNode("#"));
      button.id = `button${item.id}`
      button.onclick = (ev) => {
-      deleteTableRow(item.id)
+      deleteRowWithServer(item.id)
+      createTable();
      }
      action.appendChild(button);
      row.appendChild(action);
@@ -109,6 +111,28 @@ document.addEventListener("DOMContentLoaded", async function () {
   //   console.log(`x: ${evt.clientX}, y: ${evt.clientY}`);
   // })
 
+  }
+  async function deleteRowWithServer(rowId) {
+    const apiUrl = 'http://localhost:3200/deleteFromJson';
+    const postData ={
+      id: rowId
+    }
+    const requestOptions ={
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(postData)
+    }
+
+  await  fetch(apiUrl,requestOptions).then(response =>{
+    if (!response.ok) {
+      throw new Error('Http error!')
+    }
+    return response.json();
+  }).catch(error =>{
+    console.error('Error:', error)
+  })
   }
   function deleteTableRow(rowId) {
     var check = data.find(cake => cake.id === rowId);
