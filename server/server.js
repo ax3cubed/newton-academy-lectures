@@ -3,6 +3,7 @@ const fs = require("fs");
 const PORT = 3200;
 const cors = require("cors");
 const app = express();
+const cakes = require("./public/data/ice_cream.json");
 const FRONTEND_URL = "http://localhost:3000";
 app.use(express.static("public"));
 app.use(express.json());
@@ -19,6 +20,9 @@ app.get("/", (req, res) => {
 
 //TODO
 //CREATE Fetch Cakes API
+app.get("/fetchCakes",(req, res) => {
+  res.status(200).send(cakes).appendHeader("Content-Type","application/json");
+})
 
 app.post("/deleteFromJson", (req, res) => {
   const filePath = "public/data/ice_cream.json";

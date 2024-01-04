@@ -14,23 +14,20 @@
 
 
 document.addEventListener("DOMContentLoaded", async function () {
-  // async function fetchCakes() {
-  //   try {
-  //     const reponse = await fetch("assets/data/ice_cream.json");
-  //     if (!reponse.ok) {
-  //       throw new Error("Http error!");
-  //     }
-  //     const jsondata = await reponse.json();
-  //     return jsondata;
-  //   } catch (error) {
-  //     console.error("Error during fetch", error);
-  //   }
-  // }
-
-  function fetchCakes() {
-    //TODO
-    //Fetch Cakes from server
+  async function fetchCakes() {
+    try {
+      const reponse = await fetch("http://localhost:3200/fetchCakes");
+      if (!reponse.ok) {
+        throw new Error("Http error!");
+      }
+      const jsondata = await reponse.json();
+      return jsondata;
+    } catch (error) {
+      console.error("Error during fetch", error);
+    }
   }
+
+
   let data = await fetchCakes();
   
   function createTable(dataToLoad){
