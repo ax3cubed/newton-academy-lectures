@@ -1,4 +1,4 @@
-const ProductRow = ({ product }) => {
+export const ProductRow = ({ product }) => {
   const name =
     product.qty != 0 ? (
       product.name

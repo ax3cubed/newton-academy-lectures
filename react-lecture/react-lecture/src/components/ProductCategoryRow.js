@@ -1,6 +1,6 @@
 
 
-const ProductCategoryRow = ({ category }) =>{
+export const ProductCategoryRow = ({ category }) =>{
     return(
         <tr>
             <th colSpan="2">
