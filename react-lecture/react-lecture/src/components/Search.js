@@ -1,11 +1,15 @@
+import { useEffect, useState } from "react"
 
-export const Search = ({doFilter}) =>{
-    
+export const Search = ({searchText,
+    showOnlyProductInStock, OnSearchTextChange, OnProductInStockChange}) =>{
+
     return(
         <form>
-            <input onChange={() => doFilter(/*value1,value2*/)} type="text" placeholder="Search...."/>
+            <input value={searchText} 
+            onChange={(e) => OnSearchTextChange(e.target.value)}
+            type="text" placeholder="Search...."/>
             <label>
-                <input type="checkbox"/>
+                <input onChange={(e) => OnProductInStockChange(e.target.checked)} value={showOnlyProductInStock}  type="checkbox"/>
                 <br></br>
                 Only show products in Stock
             </label>

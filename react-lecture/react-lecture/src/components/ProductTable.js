@@ -1,10 +1,18 @@
 import { ProductCategoryRow } from "./ProductCategoryRow";
 import { ProductRow } from "./ProductRow";
 
-export const ProductTable = ({ products = [] }) => {
+export const ProductTable = ({ searchText, showOnlyProductInStock, products = [] }) => {
  const rows =[];
  var lastCategory = null;
+
+
  products.forEach((product) => {
+    if (product.name.toLowerCase().indexOf(searchText.toLowerCase()) === -1) {
+        return;
+    }
+    if (showOnlyProductInStock && product.qty < 1) {
+        return;
+    }
     if (product.category !== lastCategory) {
         rows.push(
             <ProductCategoryRow
